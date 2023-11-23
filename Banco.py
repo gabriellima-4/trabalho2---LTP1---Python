@@ -21,8 +21,11 @@ class Historico_Conta:
         
     def gravar_historico(self):
         hist = open('historico.txt', 'a')
-        hist.write(str(self.data_abertura))
-        hist.write(str(self.transacoes))
+        hist.write("---------------------------------\n")
+        hist.write("Data de abertura da conta: " + str(self.data_abertura) + "\n")
+        hist.write("Transacoes dessa conta: " + str(self.transacoes) + "\n")
+        hist.write("---------------------------------")
+        hist.write("\n")
         hist.close()
 
     def ler_historico(self):
@@ -42,8 +45,11 @@ class Cliente:
 
     def gravar_cliente(self):
         cli = open("cliente.txt", "a")
-        cli.write(self.nome_completo)
-        cli.write(self.cpf)
+        cli.write("---------------------------------\n")
+        cli.write("Nome do cliente: " + self.nome_completo + "\n")
+        cli.write("CPF: " + self.cpf + "\n")
+        cli.write("---------------------------------")
+        cli.write("\n")
         cli.close()
 
     def ler_cliente(self):
@@ -94,10 +100,12 @@ class Conta:
 
     def gravar_conta(self):
         acc = open("conta.txt", "a")
-        acc.write(self.cliente)
-        acc.write(self.numero_conta)
-        acc.write(str(self.saldo))
-
+        acc.write("---------------------------------\n")
+        acc.write("Cliente da conta: " + self.cliente + "\n")
+        acc.write("Numero da conta: " + self.numero_conta + "\n")
+        acc.write("Saldo da conta: R$" + str(self.saldo) + "\n")
+        acc.write("---------------------------------")
+        acc.write("\n")
         acc.close()
 
     def ler_conta(self):
@@ -118,15 +126,21 @@ conta1 = Conta(cliente1.nome_completo, "1100-9", 4000.0)
 cliente2 = Cliente("Pietro Cesare", "339428101-05")
 conta2 = Conta(cliente2.nome_completo, "1856-3", 2500.0)
 
+cliente3 = Cliente("Phillip Augustin", "521099712-80")
+conta3 = Conta(cliente3.nome_completo, "3002-10", 6150.0)
+
 conta1.deposito(150.0)
 conta1.saque(400.0)
 
+conta3.saque(85.0)
+
 conta1.transferencia(conta2, 250.0)
+
+conta3.transferencia(conta1, 120.0)
 
 cliente1.imprimir_cliente()
 conta1.extrato_conta()
 conta1.historico.imprimir_historico()
-print("\n")
 
 print("==================================================================\n")
 cliente2.imprimir_cliente()
@@ -134,18 +148,29 @@ conta2.extrato_conta()
 conta2.historico.imprimir_historico()
 
 print("==================================================================\n")
-# gravações e leituras em arquivo
+cliente3.imprimir_cliente()
+conta3.extrato_conta()
+conta3.historico.imprimir_historico()
+
+print("==================================================================\n")
+###########################################
+## Gravações e leituras em arquivos .txt ##
+###########################################
+
 cliente1.gravar_cliente()
 cliente2.gravar_cliente()
+cliente3.gravar_cliente()
 
 cliente1.ler_cliente()
 
 conta1.gravar_conta()
 conta2.gravar_conta()
+conta3.gravar_conta()
 
 conta1.ler_conta()
 
 conta1.historico.gravar_historico()
 conta2.historico.gravar_historico()
+conta3.historico.gravar_historico()
 
 conta1.historico.ler_historico()
