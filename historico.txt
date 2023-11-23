@@ -1,0 +1,12 @@
+---------------------------------
+Data de abertura da conta: 2023-11-23 18:40:53.252782
+Transacoes dessa conta: ['Foi confirmado um depósito de R$150.0 .', 'Foi feito um saque com valor de R$400.0 .', 'Foi feito um saque com valor de R$250.0 .', 'Transferência de R$250.0 para a conta 1856-3 do cliente Pietro Cesare. ', 'Foi confirmado um depósito de R$120.0 .', 'Foi conferido o extrato da conta - o saldo é de 3620.0']
+---------------------------------
+---------------------------------
+Data de abertura da conta: 2023-11-23 18:40:53.258724
+Transacoes dessa conta: ['Foi confirmado um depósito de R$250.0 .', 'Foi conferido o extrato da conta - o saldo é de 2750.0']
+---------------------------------
+---------------------------------
+Data de abertura da conta: 2023-11-23 18:40:53.258724
+Transacoes dessa conta: ['Foi feito um saque com valor de R$85.0 .', 'Foi feito um saque com valor de R$120.0 .', 'Transferência de R$120.0 para a conta 1100-9 do cliente Marco Prada. ', 'Foi conferido o extrato da conta - o saldo é de 5945.0']
+---------------------------------
